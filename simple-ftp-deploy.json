@@ -1,0 +1,11 @@
+{
+    "host": "https://sdtokens.com",
+    "port": 22, 
+    "username": "root",
+    "password": "Pd1@12dinGg",
+    "rootDirectory": "/test.sdtokens.com",
+    "autoCreateDirectory": false,
+    "ignoredFilenames": ["example.py", "anotherFilename.json"],
+    "ignoredExtensions": [".ignore", ".txt"],
+    "ignoredFolders": ["ignore", "IGNORE"]
+}

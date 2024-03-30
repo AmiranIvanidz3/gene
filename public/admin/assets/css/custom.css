@@ -1,0 +1,325 @@
+.permissions_group_title {
+    margin-top: 30px;
+}
+.permissions_group_title:first-child {
+    margin-top: 0px;
+}
+.permissions_group .checkbox-inline {
+    margin-bottom: 5px;
+}
+
+@media only screen and (max-width: 1920px) {
+    .select2 {
+      width:100% !important;
+    }
+  }
+
+
+@media only screen and (max-width: 985px) {
+    .select2 {
+      width:100% !important;
+}
+
+
+.playlist_search_section{
+    margin-top:10px;
+}
+}
+
+.select2-container--default .select2-selection--single{
+
+    height: calc(1.5em + 1.3rem + 2px);
+    padding-left: 1rem;
+    padding-top: 4px;
+    font-size: 1rem;
+    color: #3F4254;
+    background-color: #ffffff;
+    background-clip: padding-box;
+    border: 1px solid #E4E6EF;
+    border-radius: 0.42rem;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+    height: 26px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 1px;
+    width: 20px
+}
+.go-back{
+background-color:#CCCCCC;
+}
+.go-back i{
+    color:#000;
+}
+
+
+.dual-listbox .dual-listbox__available, .dual-listbox .dual-listbox__selected {
+    width: 325px !important;
+    min-height: 350px;
+}
+.pointer {
+    cursor: pointer;
+}
+.task_history_i {
+    display: inline-block;
+    margin: 2px 3px;
+}
+.icon-xl.far {
+    color: black;
+}
+.space_between {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.scale_pn, .scale_pv, .scale_color, .scale_inv{
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* scale probability name */
+.scale_pn{
+    margin-right: 50px;
+    left: 0;
+    
+}
+/* scale probability value */
+.scale_pv{
+    margin-left: 10px;
+}
+.scale_color{
+    min-width: 100px;
+    margin: 2px;
+}
+.main_wrapper{
+    padding: 25px;
+}
+
+/* scale impact name value */
+.scale_inv{
+    min-width: 100px;
+    width: 100%;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#threats_checkboxes .checkbox{
+    margin-bottom: 5px;
+}
+#vulnerabilities_checkboxes .checkbox{
+    margin-bottom: 5px;
+}
+.selectedAsset{
+    background-color: #add8e6;
+    padding: 10px;
+}
+.asset-item{
+    padding: 10px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+.asset-item:hover{
+    background-color: #add8e6;
+    
+}
+
+.asset_risk{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.asset_risk h3 {
+    margin-bottom: 0;
+}
+.all-assets-header{
+    margin: 7px;
+}
+.risks-card{
+    margin-top: 10px;
+}
+.delete-risk-th{
+    width: 50px;
+}
+.risk-description-row{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    max-width: 200px;
+}
+
+.removeDiv {
+    display:  flex;
+    justify-content: space-between;
+}
+.controlButtons{
+    justify-content: flex-end;
+    display:inline-flex;
+}
+
+.max-90p{
+    max-width: 90%;
+}
+
+.section-input{
+    width: 100%;
+    padding-top:15px;
+    height: 50px;
+}
+.section-textarea{
+    min-height: 200px;
+}
+.block{
+    display: block;
+}
+
+
+.flex {
+    display: flex;
+}
+.control-div{
+    padding: 30px;
+    padding-top:5px;
+    padding-bottom: 15px;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+.section-header{
+    font:bold 13px 'Ubuntu', sans-serif;
+}
+
+.subsection-header{
+    font:bold 12px 'Ubuntu', sans-serif;
+}
+
+.button-panel{
+    display: none;
+}
+
+.crd-hdr-border{
+    border: none;
+    border-bottom: none;
+}
+
+#control_status_id option:disabled {
+    color: #000;
+    /* font-weight: bold; */
+    background-color: #fff;
+}
+
+.requst_comment{
+    font-size: 12px;
+    background-color: #ccc;
+    border-radius: 4px;
+    padding: 0px 6px;
+    margin-top: 5px;
+}
+
+.pending_document_notification_circle{
+    background: orange; 
+    color: black;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    line-height: 18px;
+    font-size: 15px;
+    text-align: center;
+    align-self: center;
+}
+
+.notification-highligt{
+    background-color: antiquewhite;
+}
+
+.menu-item-open .pending_document_notification_parent{
+    display: none;
+}
+
+.control_id_hidden{
+    margin-bottom: 3px;
+}
+
+
+.common-tag{
+    padding: 2px 5px;
+    background: dodgerblue;
+    border-radius: 3px;
+    margin-right: 2px;
+    margin-bottom: 2px;
+    white-space: pre-wrap;
+    cursor: pointer;
+}
+
+.common-tag:hover{
+    filter: brightness(1.25);
+}
+
+.justification-tags-div{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+
+/* _______________________TOOLTIPS   TOOLTIPS      TOOLTIPS      TOOLTIPS_____________________ */
+
+.custom_tooltip-text {
+    background-color: rgba(28, 28, 28, 0.9);
+    border-radius: 2px;
+    padding: 5px 9px;
+    font-size: 12px;
+    color: #fff;
+    max-width: 300px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-height: 500px;
+    white-space: pre-line;
+  }
+  
+  .custom_tooltip-warning {
+    background-color: crimson !important;
+  }
+  
+  .custom_tooltip-light {
+    background-color: #616161;
+    opacity: 0.7;
+  }
+  
+  .tooltip_position {
+    display: none;
+    position: absolute;
+    transform: translate(-50%, 50%);
+    z-index: 10000000000000000;
+    top: 100%;
+    outline: none !important;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+  }
+  
+  .tooltip_position div {
+    white-space: nowrap;
+    background: #616161;
+    padding: 2px;
+    border-radius: 2px;
+    color: #fff;
+  }
+  
+  .has_tooltip2:hover .tooltip_position {
+    display: block;
+  }
+
+  
+  /* //////////////////////////////// TOOLTIPS   TOOLTIPS      TOOLTIPS      TOOLTIPS ////////////////*/
+  

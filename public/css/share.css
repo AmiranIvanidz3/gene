@@ -1,0 +1,155 @@
+
+.input-group-box{
+    border-radius: 6px;
+    background: rgba(0,0,0,0.04);
+    padding: 0px 7px;
+    border: 1px solid rgba(0,0,0,.125);
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+
+.input-group-box .mobile-input-groups:not(:first-child){
+    margin-top: 20px;
+}
+
+.mobile-input-groups{
+    display: flex;
+}
+.mobile-input-groups .mobile-input{
+    flex: 1;
+}
+
+.mobile-input-groups .mobile-input:not(:first-child){
+    margin-left: 20px;
+}
+
+
+
+
+
+
+
+
+/*-----------------------------  CHECKBOX   --------------------------------*/
+.form_meeting_checkbox_label{
+    display: flex;
+    align-items: center;
+    min-width: 40px;
+    cursor: pointer;
+}
+
+.c-checkbox_main_div {
+    display: block;
+    position: relative;
+    height: 30px;
+    width: 30px;
+    /* vertical-align: middle; */
+}
+.online_checkbox_text {
+    margin-left: 6px;
+    user-select: none;
+}
+.c-checkbox {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    font-size: 22px;
+    height: 100%;
+    width: 100%;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.c-checkbox input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+.c-checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #ccc;
+    border-radius: 2px;
+}
+.c-checkbox .c-checkmark:after {
+    position: absolute;
+    content: "";
+    display: none;
+    left: 12px;
+    top: 7px;
+    width: 7px;
+    height: 12px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+
+.c-checkbox input:checked ~ .c-checkmark:after {
+    display: block;
+}
+.c-checkbox input:checked ~ .c-checkmark {
+    background-color: lightseagreen;
+}
+
+/*/////////////////////////////  CHECKBOX   //////////////////////////////*/
+
+
+
+
+.loader_circle {
+    border: 16px solid #fff;
+    border-radius: 50%;
+    border-top: 16px solid orange;
+    width: 90px;
+    height: 90px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 0.6s linear infinite;
+}
+
+
+@-webkit-keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+@keyframes spin {
+0% {
+    transform: rotate(0deg);
+}
+100% {
+    transform: rotate(360deg);
+}
+}
+
+
+
+
+@media screen and (max-width: 500px) {
+    .mobile-input-groups{
+        flex-direction: column;
+    }
+
+    .input-group-box .mobile-input-groups:not(:first-child) {
+        margin-top: 10px;
+        border-top: 1px solid #1d1d1d;
+        padding: 12px;
+    }
+
+    .mobile-input-groups .mobile-input{
+        margin-left: 0 !important;
+        margin-bottom: 4px;
+    }
+
+    
+}
