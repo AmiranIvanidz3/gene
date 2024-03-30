@@ -24,7 +24,7 @@ class CreatePeopleTable extends Migration
             $table->string('personal_number')->unique()->nullable();
             $table->text('about')->nullable();
             $table->text('comment')->nullable();
-            $table->boolean('died')->default(false)->nullable();
+            $table->date('died')->nullable();
             $table->timestamps();
         });
     }

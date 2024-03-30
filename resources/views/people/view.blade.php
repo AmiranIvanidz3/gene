@@ -43,6 +43,106 @@
                 }
             }, 
             {
+                title: 'Mother ID',
+                data: 'mother_id',
+                render: function(data, type, row)
+                {
+
+                    return data;
+                    
+                }
+            }, 
+            {
+                title: 'Father ID',
+                data: 'father_id',
+                render: function(data, type, row)
+                {
+
+                    return data;
+                    
+                }
+            }, 
+            {
+                title: 'Name',
+                data: 'name',
+                render: function(data, type, row)
+                {
+
+                    return data;
+                    
+                }
+            }, 
+            {
+                title: 'Surname',
+                data: 'surname',
+                render: function(data, type, row)
+                {
+
+                    return data;
+                    
+                }
+            }, 
+            {
+                title: 'Gender ID',
+                data: 'gender_id',
+                render: function(data, type, row)
+                {
+
+                    return data;
+                    
+                }
+            }, 
+            {
+                title: 'Birth Date',
+                data: 'birth_date',
+                render: function(data, type, row)
+                {
+
+                    return data;
+                    
+                }
+            }, 
+            {
+                title: 'Personal Number',
+                data: 'personal_number',
+                render: function(data, type, row)
+                {
+
+                    return data;
+                    
+                }
+            }, 
+            {
+                title: 'About',
+                data: 'about',
+                render: function(data, type, row)
+                {
+
+                    return data;
+                    
+                }
+            }, 
+            {
+                title: 'Comment',
+                data: 'comment',
+                render: function(data, type, row)
+                {
+
+                    return data;
+                    
+                }
+            }, 
+            {
+                title: 'Died',
+                data: 'died',
+                render: function(data, type, row)
+                {
+
+                    return data;
+                    
+                }
+            }, 
+            {
                 title: 'Edit',
                 data: 'id',
                 sWidth:'1px',
