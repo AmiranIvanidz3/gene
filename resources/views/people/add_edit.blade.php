@@ -118,7 +118,7 @@
                     @endif
 
                     <div class="form-group  col-lg-3 col-md-4">
-                        <label>birth_date</label>
+                        <label>Birth Date</label>
                         <input type="date" class="form-control {{ $errors->has('birth_date') ? 'is-invalid' : '' }}" name="birth_date" placeholder="birth_date" value="{{ $item_birth_date }}"></input>
                         @if($errors->has('birth_date'))
                             <div class="invalid-feedback">
@@ -138,7 +138,7 @@
                     </div>
 
                     <div class="form-group  col-lg-3 col-md-4  ">
-                        <label>about</label>
+                        <label>About</label>
                         <input type="text" class="form-control {{ $errors->has('about') ? 'is-invalid' : '' }}" name="about" placeholder="about" value="{{ $item_about }}"></input>
                         @if($errors->has('about'))
                             <div class="invalid-feedback">
@@ -149,7 +149,7 @@
 
                     <div class="form-group  col-lg-3 col-md-4  ">
                         <label>Comment</label>
-                        <input type="text" class="form-control {{ $errors->has('comment') ? 'is-invalid' : '' }}" name="comment" placeholder="comment" value="{{ $item_comment }}"></input>
+                        <input type="text" class="form-control {{ $errors->has('comment') ? 'is-invalid' : '' }}" name="comment" placeholder="Comment" value="{{ $item_comment }}"></input>
                         @if($errors->has('comment'))
                             <div class="invalid-feedback">
                                 <strong>{{ $errors->first('comment') }}</strong>
@@ -160,7 +160,7 @@
                     <div class="d-flex col-12">
                         <div class="form-group">
                             <label class="d-block">Died</label>
-                            <input style="width:38px; height:38px;" onclick="displayDiedCheckbox(event)" type="checkbox" class=" {{ $errors->has('death_checkbox') ? 'is-invalid' : '' }}" name="death_checkbox" placeholder="death_checkbox"></input>
+                            <input style="width:38px; height:38px;" onclick="displayDiedCheckbox(event)" type="checkbox" class="death-checkbox {{ $errors->has('death_checkbox') ? 'is-invalid' : '' }}" name="death_checkbox" placeholder="death_checkbox"></input>
                         </div>
 
                         <div class="form-group death-date  col-lg-3 col-md-4" style="display:none">
@@ -190,13 +190,17 @@
 
     <script>
         let death_date = document.querySelector(".death-date")
-        function displayDiedCheckbox(event){
+        function displayDiedCheckbox(event = null){
+            if(event == null && @json($item_died) !== null){
+                death_date.style.display = "block"
+                $(".death-checkbox").prop("checked", true);
+            }
             if(event.target.checked){
                 death_date.style.display = "block"
             }else{
                 death_date.style.display = "none"
             }
-            
         }
+        displayDiedCheckbox()
     </script>
 @endsection

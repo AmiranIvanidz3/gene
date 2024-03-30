@@ -39,7 +39,7 @@ class PeopleController extends Controller
     
     public function peopleList(Request $request)
     {
-        $query = DB::select("SELECT * from people");
+        $query = People::with('father', 'mother')->get();
 
         return DataTables::of($query)->toJson();
     }
@@ -52,8 +52,8 @@ class PeopleController extends Controller
   public function create()
     {
         $menu[$this->parent_menu][$this->title] = true;
-        $fathers = People::get();
-        $mothers = People::get();
+        $fathers = People::where('gender_id', 1)->get();
+        $mothers = People::where('gender_id', 2)->get();
 
         return view(strtolower($this->title).'.add_edit')
             ->with('action', 'add')
@@ -114,13 +114,17 @@ class PeopleController extends Controller
     {
            
         $item = People::find($id);
+        $fathers = People::where('gender_id', 1)->get();
+        $mothers = People::where('gender_id', 2)->get();
         
         $menu[$this->parent_menu][$this->title] = true;
 
         return view(strtolower($this->title).'.add_edit')
             ->with('menu', $menu) 
             ->with('item', $item)
-            ->with('action', 'edit');
+            ->with('action', 'edit')
+            ->with('fathers', $fathers)
+            ->with('mothers', $mothers);
     }
 
 

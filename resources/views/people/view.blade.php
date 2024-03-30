@@ -43,22 +43,22 @@
                 }
             }, 
             {
-                title: 'Mother ID',
-                data: 'mother_id',
+                title: 'Mother',
+                data:'id',
                 render: function(data, type, row)
                 {
 
-                    return data;
+                    return row.mother ? row.mother.name : "";
                     
                 }
             }, 
             {
-                title: 'Father ID',
-                data: 'father_id',
+                title: 'Father',
+                data: 'id',
                 render: function(data, type, row)
                 {
 
-                    return data;
+                    return row.father ? row.father.name : "";
                     
                 }
             }, 
@@ -88,7 +88,7 @@
                 render: function(data, type, row)
                 {
 
-                    return data;
+                    return (data == 1) ? 'Male' : 'Female';
                     
                 }
             }, 
@@ -137,7 +137,7 @@
                 data: 'died',
                 render: function(data, type, row)
                 {
-
+                    
                     return data;
                     
                 }
