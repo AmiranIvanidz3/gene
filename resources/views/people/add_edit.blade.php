@@ -46,11 +46,11 @@
                 @if ($action == 'edit')
                     @method('PUT')
                 @endif
-                <div class="card-body">
+                <div class="card-body row">
 
        
 
-                    <div class="form-group">
+                    <div class="form-group col-lg-3 col-md-4">
                         <label for="kt_select2_1">Father</label>
                         <select class="form-control select2" id="kt_select2_5" name="father_id" >
                             <option value="0">Select Father</option>
@@ -65,7 +65,7 @@
                         </div>
                     @endif
 
-                    <div class="form-group">
+                    <div class="form-group  col-lg-3 col-md-4  ">
                         <label for="kt_select2_2">Mother</label>
                         <select class="form-control select2" id="kt_select2_4" name="mother_id" >
                             <option value="0">Select Mother</option>
@@ -81,7 +81,7 @@
                     @endif
 
 
-                    <div class="form-group">
+                    <div class="form-group  col-lg-3 col-md-4  ">
                         <label>Name</label>
                         <input type="text" class="form-control {{ $errors->has('name') ? 'is-invalid' : '' }}" name="name" placeholder="Name" value="{{ $item_name }}"></input>
                         @if($errors->has('name'))
@@ -92,7 +92,7 @@
                     </div>
 
                   
-                    <div class="form-group">
+                    <div class="form-group  col-lg-3 col-md-4  ">
                         <label>Surname</label>
                         <input type="text" class="form-control {{ $errors->has('surname') ? 'is-invalid' : '' }}" name="surname" placeholder="surname" value="{{ $item_surname }}"></input>
                         @if($errors->has('surname'))
@@ -102,7 +102,7 @@
                         @endif
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group  col-lg-3 col-md-4  ">
                         <label for="kt_select2">Gender</label>
                         <select class="form-control select2" id="kt_select2_1" name="gender_id" >
                             <option value="0">Select Gender</option>
@@ -117,7 +117,7 @@
                         </div>
                     @endif
 
-                    <div class="form-group">
+                    <div class="form-group  col-lg-3 col-md-4">
                         <label>birth_date</label>
                         <input type="date" class="form-control {{ $errors->has('birth_date') ? 'is-invalid' : '' }}" name="birth_date" placeholder="birth_date" value="{{ $item_birth_date }}"></input>
                         @if($errors->has('birth_date'))
@@ -127,7 +127,7 @@
                         @endif
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group  col-lg-3 col-md-4  ">
                         <label>Personal Number</label>
                         <input type="text" class="form-control {{ $errors->has('personal_number') ? 'is-invalid' : '' }}" name="personal_number" placeholder="Personal number" value="{{ $item_personal_number }}"></input>
                         @if($errors->has('personal_number'))
@@ -137,7 +137,7 @@
                         @endif
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group  col-lg-3 col-md-4  ">
                         <label>about</label>
                         <input type="text" class="form-control {{ $errors->has('about') ? 'is-invalid' : '' }}" name="about" placeholder="about" value="{{ $item_about }}"></input>
                         @if($errors->has('about'))
@@ -147,7 +147,7 @@
                         @endif
                     </div>
 
-                    <div class="form-group">
+                    <div class="form-group  col-lg-3 col-md-4  ">
                         <label>Comment</label>
                         <input type="text" class="form-control {{ $errors->has('comment') ? 'is-invalid' : '' }}" name="comment" placeholder="comment" value="{{ $item_comment }}"></input>
                         @if($errors->has('comment'))
@@ -157,17 +157,26 @@
                         @endif
                     </div>
 
-                    <div class="form-group">
-                        <label>Died</label>
-                        <input type="text" class="form-control {{ $errors->has('died') ? 'is-invalid' : '' }}" name="died" placeholder="died" value="{{ $item_died }}"></input>
-                        @if($errors->has('died'))
-                            <div class="invalid-feedback">
-                                <strong>{{ $errors->first('died') }}</strong>
-                            </div>
-                        @endif
+                    <div class="d-flex col-12">
+                        <div class="form-group">
+                            <label class="d-block">Died</label>
+                            <input style="width:38px; height:38px;" onclick="displayDiedCheckbox(event)" type="checkbox" class=" {{ $errors->has('death_checkbox') ? 'is-invalid' : '' }}" name="death_checkbox" placeholder="death_checkbox"></input>
+                        </div>
+
+                        <div class="form-group death-date  col-lg-3 col-md-4" style="display:none">
+                            <label for="" class="d-block">Death Date</label>
+                            <input type="date" class="form-control {{ $errors->has('died') ? 'is-invalid' : '' }}" name="died" placeholder="died" value="{{ $item_died}}"></input>
+                            @if($errors->has('died'))
+                                <div class="invalid-feedback">
+                                    <strong>{{ $errors->first('died') }}</strong>
+                                </div>
+                            @endif
+                        </div>
                     </div>
+                   
+                </div>
                     
-                <div class="card-footer">
+                <div class="form-group card-footer">
                     <button type="submit" class="btn btn-success mr-2">Submit</button>
                     @csrf
                 </div>
@@ -178,4 +187,16 @@
 
     </div>
     <!--end::Container-->
+
+    <script>
+        let death_date = document.querySelector(".death-date")
+        function displayDiedCheckbox(event){
+            if(event.target.checked){
+                death_date.style.display = "block"
+            }else{
+                death_date.style.display = "none"
+            }
+            
+        }
+    </script>
 @endsection
